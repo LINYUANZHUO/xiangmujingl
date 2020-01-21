@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         initBottomNavBar();
         initTab();
         bottomNavigationBar.setTabSelectedListener(this);
+        
     }
 
 
