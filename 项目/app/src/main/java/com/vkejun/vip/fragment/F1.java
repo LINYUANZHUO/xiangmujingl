@@ -28,6 +28,8 @@ public class F1 extends Fragment
         super.onActivityCreated(paramBundle);
         this.toolbar = ((Toolbar)getActivity().findViewById(R.id.activitymainToolbar1));
         this.toolbar.setTitle("首页");
+        setHasOptionsMenu(true);
+        ((AppCompatActivity)getActivity()).setSupportActionBar(this.toolbar);
 
     }
 

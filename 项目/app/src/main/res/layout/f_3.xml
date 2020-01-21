@@ -1,34 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
 	android:orientation="vertical">
-    
-    <android.support.v7.widget.Toolbar
-        android:background="?attr/colorPrimary"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:elevation="5dp"
-        android:id="@+id/activitymainToolbar1"/>
 
-	<Button
-		android:layout_width="wrap_content"
-		style="?android:attr/buttonStyleSmall"
-		android:layout_height="wrap_content"
-		android:text="Small Button"/>
+	<android.support.v7.widget.Toolbar
+		android:background="?attr/colorPrimary"
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"
+		android:elevation="5dp"
+		android:id="@+id/activitymainToolbar1"/>
 
-	<Button
-		android:layout_width="wrap_content"
-		style="?android:attr/buttonStyleSmall"
+	<android.support.v7.widget.CardView
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="Small Button"/>
+		app:cardCornerRadius="8dp"
+		app:cardElevation="10dp"
+		android:clickable="true"
+		android:foreground="?attr/selectableItemBackground"
+		app:cardUseCompatPadding="true"
+		android:id="@+id/fragmentf3CardView1">
+        
+        <LinearLayout
+            android:background="?attr/colorPrimary"
+            android:orientation="vertical"
+            android:id="@+id/fragment_mydataLinearLayout"
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
 
-	<Button
-		android:layout_width="wrap_content"
-		style="?android:attr/buttonStyleSmall"
-		android:layout_height="wrap_content"
-		android:text="Small Button"/>
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/fragment_mydataImageView"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/tx"/>
+
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFFFF"
+                    android:id="@+id/fragment_mydataTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="未登录"
+                    android:singleLine="true"
+                    android:layout_weight="1.0"/>
+
+                <Button
+                    android:textColor="@android:color/white"
+                    android:id="@+id/fragment_mydataButton"
+                    android:background="@drawable/button_circle"
+                    android:layout_width="65dp"
+                    android:layout_height="40dp"
+                    android:text="编辑资料"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+
+                    <TextView
+                        android:textColor="#FFFFFFFF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+
+                    <TextView
+                        android:textColor="#FFFFFFFF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未开发"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+
+                    <TextView
+                        android:textColor="#FFFFFFFF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+
+                    <TextView
+                        android:textColor="#FFFFFFFF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未开发"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+
+                    <TextView
+                        android:textColor="#FFFFFFFF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+
+                    <TextView
+                        android:textColor="#FFFFFFFF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未开发"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+		</LinearLayout>
+
+	</android.support.v7.widget.CardView>
+
+	<include
+		layout="@layout/fragment_mydata_main"/>
 
 </LinearLayout>
 

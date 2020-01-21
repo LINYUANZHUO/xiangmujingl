@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.os.Bundle;
 import com.vkejun.vip.R;
 import android.support.v7.widget.Toolbar;
+import android.support.v7.app.AppCompatActivity;
 
 public class F2 extends Fragment
 {
@@ -24,6 +25,8 @@ public class F2 extends Fragment
         super.onActivityCreated(paramBundle);
         this.toolbar = ((Toolbar)getActivity().findViewById(R.id.activitymainToolbar1));
         this.toolbar.setTitle("工具");
+        setHasOptionsMenu(true);
+        ((AppCompatActivity)getActivity()).setSupportActionBar(this.toolbar);
 
     }
     
