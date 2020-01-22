@@ -53,6 +53,9 @@
             android:name=".activity.LoginActivity" android:label="登录"/>
         
         <activity
+            android:name=".activity.LoginZCActivity" android:label="注册"/>
+        
+        <activity
             android:name=".activity.ThemeActivity" android:label="主题"/>
         
         <activity
