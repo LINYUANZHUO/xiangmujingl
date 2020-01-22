@@ -11,9 +11,13 @@ import android.widget.LinearLayout;
 import com.vkejun.vip.R;
 import com.vkejun.vip.activity.SettingActivity;
 import com.vkejun.vip.activity.ThemeActivity;
+import android.support.v7.widget.Toolbar;
+import android.support.v7.app.AppCompatActivity;
 
 public class F3 extends Fragment
 {
+
+    private Toolbar toolbar;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -24,6 +28,11 @@ public class F3 extends Fragment
     public void onActivityCreated(Bundle savedInstanceState)
     {
         super.onActivityCreated(savedInstanceState);
+        this.toolbar = ((Toolbar)getActivity().findViewById(R.id.activitymainToolbar1));
+        this.toolbar.setTitle("我的");
+        setHasOptionsMenu(true);
+        ((AppCompatActivity)getActivity()).setSupportActionBar(this.toolbar);
+        
         //创建布局后，这里写代码逻辑
 
 //        ImageView i1=(ImageView)getActivity().findViewById(R.id.fragment_mydataImageView);
