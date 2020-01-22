@@ -13,6 +13,9 @@ import com.vkejun.vip.activity.SettingActivity;
 import com.vkejun.vip.activity.ThemeActivity;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.app.AppCompatActivity;
+import com.vkejun.vip.activity.LoginActivity;
+import android.widget.Button;
+import android.support.v7.widget.CardView;
 
 public class F3 extends Fragment
 {
@@ -35,42 +38,36 @@ public class F3 extends Fragment
         
         //创建布局后，这里写代码逻辑
 
-//        ImageView i1=(ImageView)getActivity().findViewById(R.id.fragment_mydataImageView);
-//        Button b1=(Button)getActivity().findViewById(R.id.fragment_mydataButton);
-//        LinearLayout l1=(LinearLayout)getActivity().findViewById(R.id.fragmentmydatamainLinearLayout1);
+        CardView c1=(CardView)getActivity().findViewById(R.id.fragment_mydataImageView);
+        Button b1=(Button)getActivity().findViewById(R.id.fragment_mydataButton);
+        LinearLayout l3=(LinearLayout)getActivity().findViewById(R.id.fragmentmydatamainLinearLayout3);
         LinearLayout l4=(LinearLayout)getActivity().findViewById(R.id.fragmentmydatamainLinearLayout4);
         LinearLayout l5=(LinearLayout)getActivity().findViewById(R.id.fragmentmydatamainLinearLayout5);//声明实例
         //注意getActivity()方法
-/*        i1.setOnClickListener(new OnClickListener(){
+        c1.setOnClickListener(new OnClickListener(){
                 @Override
                 public void onClick(View p1){
                     //你要的跳转设置的点击事件
                     Intent qs = new Intent(getActivity(),
                                            LoginActivity.class);//这个就是意图
                     getActivity().startActivity(qs);//表示从当前布局跳转到SettingActivity这个意图
-                    overridePendingTransition(R.anim.jump_enter_anim, R.anim.jump_exit_anim);
-                }
-
-                private void overridePendingTransition(int jump_enter_anim, int jump_exit_anim)
-                {
-                    // TODO: Implement this method
                 }});
         b1.setOnClickListener(new OnClickListener(){
                 @Override
                 public void onClick(View p1){
                     //你要的跳转设置的点击事件
                     Intent qs = new Intent(getActivity(),
-                                           MyDataActivity.class);//这个就是意图
+                                           LoginActivity.class);//这个就是意图
                     getActivity().startActivity(qs);//表示从当前布局跳转到SettingActivity这个意图
                 }});
-        l1.setOnClickListener(new OnClickListener(){
+        l3.setOnClickListener(new OnClickListener(){
                 @Override
                 public void onClick(View p1){
                     //你要的跳转设置的点击事件
                     Intent qs = new Intent(getActivity(),
-                                           SpecialTabActivity.class);//这个就是意图
+                                           LoginActivity.class);//这个就是意图
                     getActivity().startActivity(qs);//表示从当前布局跳转到SettingActivity这个意图
-                }});*/
+                }});
         l4.setOnClickListener(new OnClickListener(){
                 @Override
                 public void onClick(View p1){

@@ -26,9 +26,14 @@
           android:value="4.0"/>
 
         <activity
-            android:name=".activity.SettingActivity" android:label="设置"/>
+            android:name=".activity.LoginActivity" android:label="登录"/>
+        
         <activity
             android:name=".activity.ThemeActivity" android:label="主题"/>
+        
+        <activity
+            android:name=".activity.SettingActivity" android:label="设置"/>
+        
     </application>
 	
 </manifest>
