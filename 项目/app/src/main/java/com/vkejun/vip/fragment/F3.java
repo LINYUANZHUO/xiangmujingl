@@ -16,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.vkejun.vip.activity.LoginActivity;
 import android.widget.Button;
 import android.support.v7.widget.CardView;
+import com.vkejun.vip.activity.EditActivity;
 
 public class F3 extends Fragment
 {
@@ -65,7 +66,7 @@ public class F3 extends Fragment
                 public void onClick(View p1){
                     //你要的跳转设置的点击事件
                     Intent qs = new Intent(getActivity(),
-                                           LoginActivity.class);//这个就是意图
+                                           EditActivity.class);//这个就是意图
                     getActivity().startActivity(qs);//表示从当前布局跳转到SettingActivity这个意图
                 }});
         l4.setOnClickListener(new OnClickListener(){

@@ -56,6 +56,9 @@
             android:name=".activity.LoginZCActivity" android:label="注册"/>
         
         <activity
+            android:name=".activity.EditActivity" android:label="编辑发帖"/>
+        
+        <activity
             android:name=".activity.ThemeActivity" android:label="主题"/>
         
         <activity

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<android.support.v7.widget.Toolbar
+		android:background="?attr/colorPrimary"
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"
+		android:elevation="5dp"
+		android:id="@+id/activitymainToolbar1">
+
+		<ImageView
+			android:layout_width="42dp"
+			android:layout_height="42dp"
+			android:src="@drawable/ic_settings_black"
+			android:layout_gravity="right"
+			android:paddingRight="18dp"/>
+
+	</android.support.v7.widget.Toolbar>
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:id="@+id/editor_base_content"
+		android:background="#D7E9DEDE"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop="52dp">
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:background="#FFFFFFFF"
+			android:clickable="true"
+			android:layout_width="match_parent"
+			android:layout_height="45dp"
+			android:layout_marginLeft="7dp"
+			android:layout_marginTop="7dp"
+			android:layout_marginRight="7dp">
+
+			<EditText
+				android:textSize="16sp"
+				android:textColor="#D7E9DEDE"
+				android:textColorHint="#D7E9DEDE"
+				android:id="@+id/title_post1"
+				android:background="@null"
+				android:layout_width="match_parent"
+				android:layout_height="45dp"
+				android:layout_marginLeft="5dp"
+				android:hint="标题(25字以内)"
+				android:ems="10"
+				android:singleLine="true"
+				android:maxLength="25"
+				android:lineSpacingExtra="4.599976dp"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:padding="7dp"
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:layout_weight="1.0">
+
+			<ScrollView
+				android:id="@+id/post_scrollview"
+				android:background="#FFFFFFFF"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:id="@+id/ll_edit"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<EditText
+						android:textSize="16sp"
+						android:textColorHint="#D7E9DEDE"
+						android:gravity="top"
+						android:id="@+id/editContent"
+						android:background="#00000000"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="5dp"
+						android:layout_marginTop="16dp"
+						android:layout_marginRight="16dp"
+						android:hint="请输入内容"
+						android:ems="12"
+						android:singleLine="false"
+						android:lineSpacingExtra="4.599976dp"/>
+
+				</LinearLayout>
+
+			</ScrollView>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:id="@+id/tuline"
+			android:padding="3dp"
+			android:visibility="gone"
+			android:layout_width="match_parent"
+			android:layout_height="80dp">
+
+			<ImageView
+				android:id="@+id/ttu1"
+				android:layout_width="55dp"
+				android:layout_height="65dp"
+				android:layout_marginLeft="6dp"
+				android:scaleType="fitXY"
+				android:layout_alignParentLeft="true"/>
+
+			<ImageView
+				android:id="@+id/ttu2"
+				android:layout_width="55dp"
+				android:layout_height="65dp"
+				android:layout_marginLeft="10dp"
+				android:scaleType="fitXY"
+				android:layout_alignParentLeft="true"/>
+
+		</LinearLayout>
+
+		<RelativeLayout
+			android:id="@+id/layout1"
+			android:background="#FFFFFFFF"
+			android:layout_width="match_parent"
+			android:layout_height="45dp">
+
+			<View
+				android:background="#D7E9DEDE"
+				android:layout_width="match_parent"
+				android:layout_height="0.5dp"/>
+
+			<ImageView
+				android:id="@+id/pic_select"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="17dp"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"/>
+
+			<View
+				android:background="#D7E9DEDE"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_alignParentBottom="true"/>
+
+		</RelativeLayout>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:padding="7dp"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"/>
+
+	<ProgressBar
+		android:id="@+id/gress1"
+		android:visibility="gone"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"/>
+
+</RelativeLayout>
+
