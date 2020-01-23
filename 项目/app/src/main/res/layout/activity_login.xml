@@ -1,76 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><!--登录界面,用LinearLayout-->
-
-<ScrollView
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#eeeeee">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_login_pane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerInParent="true"
         android:orientation="vertical">
 
-        <LinearLayout
+        <EditText
+            android:id="@+id/zh"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp">
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:minHeight="45dp"
+            android:drawableLeft="@android:drawable/sym_action_email"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="Username"
+            android:singleLine="true"
+            android:textSize="16sp"/>
 
-            <ImageView
-                android:id="@+id/symbol"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_marginLeft="20dp"
-                android:id="@+id/qq"
-                android:visibility="gone"
-                android:layout_width="wrap_content"
-                android:layout_marginTop="35dp"
-                android:text="登录界面"
-                android:textSize="24sp"
-                android:layout_height="wrap_content" />
-
-
-        </LinearLayout>
-
-
-        <ImageView
-            android:layout_gravity="center"
-            android:id="@+id/iv"
-            android:layout_width="80dp"
-            android:layout_height="80dp" />
-
-        <!--输入框-->
         <EditText
-            android:id="@+id/et_user_name"
-            android:layout_width="320dp"
+            android:id="@+id/mi"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="60dp"
-            android:hint="账号"
-            android:textSize="20sp" />
-        <!--输入框-->
-        <EditText
-            android:id="@+id/et_psw"
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:hint="密码"
-            android:textSize="20sp"
-            android:inputType="textPassword" />
-        <!--按钮-->
+            android:inputType="textPassword"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:minHeight="45dp"
+            android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="Password"
+            android:singleLine="true"
+            android:textSize="16sp"/>
+
         <Button
             android:id="@+id/btn_login"
             android:text="登录"
-            android:onClick="denglu"
-            android:background="@color/colorPrimary"
             android:textSize="24sp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_width="320dp"
-            android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <RelativeLayout
             android:layout_marginTop="15dp"
@@ -78,40 +74,62 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:onClick="zhuche"
                 android:id="@+id/tv_register"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="新用户注册" />
-            <!--layout_weight="1" layout_width="0dp"实现均分效果-->
+                android:text="新用户注册"/>
+
             <TextView
                 android:id="@+id/tv_find_psw"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="忘记密码？" />
+                android:text="忘记密码？"/>
+
         </RelativeLayout>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
 
-            <RelativeLayout
-                android:layout_gravity="center"
-                android:layout_marginBottom="30dp"
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal">
 
-                <TextView
-                    android:layout_alignParentBottom="true"
+                <CheckBox
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="登录即代表阅读并同意服务条款" />
-            </RelativeLayout>
-        </LinearLayout>
+                    android:id="@+id/mainRadioButton1"/>
+
+                <TextView
+                    android:id="@+id/mainTextView1"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="登录即代表阅读并同意服务条款"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
     </LinearLayout>
-</ScrollView>
+
+    <com.vkejun.vip.utils.OwlView
+        android:id="@+id/aaa"
+        android:layout_above="@id/ll_login_pane"
+        android:layout_width="175dp"
+        android:layout_height="107dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
+
