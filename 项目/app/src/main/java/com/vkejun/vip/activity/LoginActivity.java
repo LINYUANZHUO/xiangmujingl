@@ -7,14 +7,22 @@ import android.view.View;
 import android.content.Intent;
 import com.vkejun.vip.utils.OwlView;
 import android.widget.EditText;
+import android.widget.Button;
+import android.view.View.OnClickListener;
+import android.widget.Toast;
+import android.text.TextUtils;
 
 public class LoginActivity extends AppCompatActivity {
 
+    Button btn1;
+    Toast toast;
     private OwlView mOwlView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        
+        btn1 = (Button) findViewById(R.id.activityloginButton1);
         
         mOwlView=(OwlView)findViewById(R.id.aaa);
         EditText eee=(EditText)findViewById(R.id.mi);
@@ -29,6 +37,16 @@ public class LoginActivity extends AppCompatActivity {
                         mOwlView.close();
                         // 失去焦点
                     }
+                }
+            });
+            
+        btn1.setOnClickListener(new OnClickListener() {
+                //设置监听器
+                public void onClick(View v) {
+                    
+                }
+
+                private void showToast(String p0) {
                 }
             });
     }

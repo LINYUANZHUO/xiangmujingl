@@ -20,9 +20,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         initBottomNavBar();
         initTab();
         bottomNavigationBar.setTabSelectedListener(this);
-        
     }
-
 
     private void initBottomNavBar(){
         /*1.首先进行fvb*/
