@@ -16,6 +16,8 @@ import android.support.v7.app.AppCompatActivity;
 import com.vkejun.vip.activity.LoginActivity;
 import android.widget.Button;
 import android.support.v7.widget.CardView;
+import com.vkejun.vip.activity.LoginActivity2;
+import com.vkejun.vip.activity.LoginZCActivity2;
 
 public class F3 extends Fragment
 {
@@ -40,6 +42,8 @@ public class F3 extends Fragment
 
         CardView c1=(CardView)getActivity().findViewById(R.id.fragment_mydataImageView);
         Button b1=(Button)getActivity().findViewById(R.id.fragment_mydataButton);
+        LinearLayout l1=(LinearLayout)getActivity().findViewById(R.id.fragmentmydatamainLinearLayout1);
+        LinearLayout l2=(LinearLayout)getActivity().findViewById(R.id.fragmentmydatamainLinearLayout2);
         LinearLayout l3=(LinearLayout)getActivity().findViewById(R.id.fragmentmydatamainLinearLayout3);
         LinearLayout l4=(LinearLayout)getActivity().findViewById(R.id.fragmentmydatamainLinearLayout4);
         LinearLayout l5=(LinearLayout)getActivity().findViewById(R.id.fragmentmydatamainLinearLayout5);//声明实例
@@ -58,6 +62,22 @@ public class F3 extends Fragment
                     //你要的跳转设置的点击事件
                     Intent qs = new Intent(getActivity(),
                                            LoginActivity.class);//这个就是意图
+                    getActivity().startActivity(qs);//表示从当前布局跳转到SettingActivity这个意图
+                }});
+        l1.setOnClickListener(new OnClickListener(){
+                @Override
+                public void onClick(View p1){
+                    //你要的跳转设置的点击事件
+                    Intent qs = new Intent(getActivity(),
+                                           LoginActivity2.class);//这个就是意图
+                    getActivity().startActivity(qs);//表示从当前布局跳转到SettingActivity这个意图
+                }});
+        l2.setOnClickListener(new OnClickListener(){
+                @Override
+                public void onClick(View p1){
+                    //你要的跳转设置的点击事件
+                    Intent qs = new Intent(getActivity(),
+                                           LoginZCActivity2.class);//这个就是意图
                     getActivity().startActivity(qs);//表示从当前布局跳转到SettingActivity这个意图
                 }});
         l3.setOnClickListener(new OnClickListener(){
