@@ -9,6 +9,7 @@ import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
 import com.vkejun.vip.utils.MToast;
+import com.vkejun.vip.utils.StatusBarUtils;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationBar.OnTabSelectedListener{
     private BottomNavigationBar bottomNavigationBar;
@@ -24,6 +25,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         initBottomNavBar();
         initTab();
         bottomNavigationBar.setTabSelectedListener(this);
+        
+        //调用设置状态栏颜色
+        StatusBarUtils.setColor(this, getResources().getColor(R.color.colorPrimaryDark));
+        //图片置顶
+        //StatusBarUtils.setTransparent(this);
     }
 
     private void initBottomNavBar(){
