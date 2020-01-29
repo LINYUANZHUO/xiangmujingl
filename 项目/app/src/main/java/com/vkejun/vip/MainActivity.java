@@ -7,12 +7,16 @@ import com.vkejun.vip.fragment.F3;
 import android.os.Bundle;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import android.support.v4.app.FragmentTransaction;
+import android.view.KeyEvent;
+import com.vkejun.vip.utils.MToast;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationBar.OnTabSelectedListener{
     private BottomNavigationBar bottomNavigationBar;
     private F1 f1q;
     private F2 f2q;
     private F3 f3q;
+
+    private long firstTime;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +80,20 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         transaction.commit();
     }
 
+    //双击返回键退出程序判断
+    public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent) {
+        if (paramInt == 4 && paramKeyEvent.getAction() == 0) {
+            long l = System.currentTimeMillis();
+            if (l - this.firstTime > 2000L) {
+                MToast.show(this, "再按一次退出程序");
+                this.firstTime = l;
+                return true;
+            }
+            finish();
+        }
+        return onKeyUp(paramInt, paramKeyEvent);
+    }
+    
     @Override
     public void onTabUnselected(int position) {
 
